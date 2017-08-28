@@ -1,0 +1,3 @@
+<td>入职时间:</td>
+  <td><input class="input" type="text" id="hiredate"
+ name="hiredate" onFocus="WdatePicker({dateFmt:'yyyy-MM-dd'})" class="Wdate" /></td>

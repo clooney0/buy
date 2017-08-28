@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xmlns="http://java.sun.com/xml/ns/javaee" 
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>buy</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-class>com.cn.easybuy.filter.myFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+    <init-param>
+      <param-name>ignore</param-name>
+      <param-value>true</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <servlet-name>login</servlet-name>
+    <servlet-class>com.cn.easybuy.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>updateUser</servlet-name>
+    <servlet-class>com.cn.easybuy.servlet.UpdateUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>deleteUser</servlet-name>
+    <servlet-class>com.cn.easybuy.servlet.DeleteUserServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>doReg</servlet-name>
+  	<servlet-class>com.cn.easybuy.servlet.doRegServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>updateComment</servlet-name>
+  	<servlet-class>com.cn.easybuy.servlet.UpdateCommentServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>deleteComment</servlet-name>
+  	<servlet-class>com.cn.easybuy.servlet.DeleteCommentServlet</servlet-class>
+  </servlet>
+    <servlet>
+  	<servlet-name>checkUser</servlet-name>
+  	<servlet-class>com.cn.easybuy.servlet.checkUser</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>updateOrderStuts</servlet-name>
+  	<servlet-class>com.cn.easybuy.servlet.UpdateOrderStuts</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>addCart</servlet-name>
+  	<servlet-class>com.cn.easybuy.servlet.AddCartServlet</servlet-class>
+  </servlet>
+  
+  
+  <servlet-mapping>
+  	<servlet-name>addCart</servlet-name>
+  	<url-pattern>/addCart</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>updateOrderStuts</servlet-name>
+  	<url-pattern>/manage/updateOrderStuts</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+  	<servlet-name>checkUser</servlet-name>
+  	<url-pattern>/checkUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>deleteComment</servlet-name>
+  	<url-pattern>/manage/deleteComment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>updateComment</servlet-name>
+  	<url-pattern>/manage/updateComment</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>doReg</servlet-name>
+  	<url-pattern>/doReg</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deleteUser</servlet-name>
+    <url-pattern>/manage/deleteUser</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>login</servlet-name>
+    <url-pattern>/Userlogin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>updateUser</servlet-name>
+    <url-pattern>/manage/updateUser</url-pattern>
+  </servlet-mapping>
+  
+<servlet>
+<servlet-name>NewsAdd</servlet-name>
+<servlet-class>com.cn.easybuy.servlet.NewsAdd</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>NewsAdd</servlet-name>
+<url-pattern>/manage/NewsAdd</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>NewsUpd</servlet-name>
+<servlet-class>com.cn.easybuy.servlet.NewsUpd</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>NewsUpd</servlet-name>
+<url-pattern>/manage/NewsUpd</url-pattern>
+</servlet-mapping>
+<servlet>
+<servlet-name>NewsDel</servlet-name>
+<servlet-class>com.cn.easybuy.servlet.NewsDel</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>NewsDel</servlet-name>
+<url-pattern>/manage/NewsDel</url-pattern>
+</servlet-mapping>
+
+
+
+ 
+  <servlet>
+    <servlet-name>updateProduct</servlet-name>
+    <servlet-class>com.cn.easybuy.servlet.updateProduct</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateProduct</servlet-name>
+    <url-pattern>/manage/updateProduct</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>addProduct</servlet-name>
+    <servlet-class>com.cn.easybuy.servlet.addProduct</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addProduct</servlet-name>
+    <url-pattern>/manage/addProduct</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>deleteProduct</servlet-name>
+    <servlet-class>com.cn.easybuy.servlet.deleteProduct</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteProduct</servlet-name>
+    <url-pattern>/manage/deleteProduct</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>updateCategory</servlet-name>
+    <servlet-class>com.cn.easybuy.servlet.updateCategory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>updateCategory</servlet-name>
+    <url-pattern>/manage/updateCategory</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>deleteProductParent</servlet-name>
+    <servlet-class>com.cn.easybuy.servlet.deleteProductParent</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteProductParent</servlet-name>
+    <url-pattern>/manage/deleteProductParent</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>deleteProductCategory</servlet-name>
+    <servlet-class>com.cn.easybuy.servlet.deleteProductCategory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>deleteProductCategory</servlet-name>
+    <url-pattern>/manage/deleteProductCategory</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>addCategory</servlet-name>
+    <servlet-class>com.cn.easybuy.servlet.addCategory</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>addCategory</servlet-name>
+    <url-pattern>/manage/addCategory</url-pattern>
+  </servlet-mapping>
+
+
+<servlet>
+	<servlet-name>addGuestBook</servlet-name>
+	<servlet-class>com.cn.easybuy.servlet.AddGuestBookServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>addGuestBook</servlet-name>
+	<url-pattern>/addGuestBook</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>updateCartPrice</servlet-name>
+	<servlet-class>com.cn.easybuy.servlet.updateCartServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+	<servlet-name>updateCartPrice</servlet-name>
+	<url-pattern>/updateCartPrice</url-pattern>
+</servlet-mapping>
+</web-app>
